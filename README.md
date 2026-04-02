@@ -4,6 +4,7 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
 
 ## What is included
 
+- Zsh shell config (`.zshrc` + `.p10k.zsh`)
 - Hyprland (`.config/hypr`)
 - Waybar (`.config/waybar`)
 - Wofi (`.config/wofi`)
@@ -15,6 +16,7 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
 
 ```text
 .
+├── .p10k.zsh
 ├── .config
 │   ├── Code
 │   │   └── User
@@ -40,12 +42,19 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
 │   └── wofi
 │       ├── config
 │       └── style.css
+├── .zshrc
 └── README.md
 ```
 
 ## Prerequisites
 
 - Arch Linux (or compatible distro)
+- `zsh`
+- `oh-my-zsh`
+- `powerlevel10k`
+- Zsh plugins used in `.zshrc`:
+  - `zsh-autosuggestions`
+  - `zsh-syntax-highlighting`
 - Hyprland ecosystem tools used by the config:
   - `hyprland`
   - `waybar`
@@ -70,6 +79,8 @@ cp -r ~/.config/wofi ~/.config-backup/ 2>/dev/null || true
 cp -r ~/.config/kitty ~/.config-backup/ 2>/dev/null || true
 cp -r ~/.config/Code ~/.config-backup/ 2>/dev/null || true
 cp -r ~/.config/nvim ~/.config-backup/ 2>/dev/null || true
+cp ~/.zshrc ~/.config-backup/ 2>/dev/null || true
+cp ~/.p10k.zsh ~/.config-backup/ 2>/dev/null || true
 ```
 
 ### 2. Apply dotfiles
@@ -78,6 +89,8 @@ From the repository root:
 
 ```bash
 cp -r .config/* ~/.config/
+cp .zshrc ~/.zshrc
+cp .p10k.zsh ~/.p10k.zsh
 ```
 
 ## Notes
@@ -85,6 +98,7 @@ cp -r .config/* ~/.config/
 - Kitty includes only the active theme referenced by `kitty.conf`.
 - Neovim folder intentionally contains only files that override LazyVim defaults.
 - VS Code export intentionally contains only user settings, not history/cache/state.
+- Zsh setup assumes `oh-my-zsh` and `powerlevel10k` are installed in the expected paths.
 
 ## Maintenance
 
