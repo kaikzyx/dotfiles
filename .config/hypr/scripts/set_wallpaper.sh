@@ -1,34 +1,29 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-WALLPAPER_DIR="$HOME/Documents/wallpapers"
+set -euo pipefail
 
-# Check if directory exists.
-if [ ! -d "$WALLPAPER_DIR" ]; then
-    echo "Error: Directory $WALLPAPER_DIR does not exist."
-    exit 1
+WALLPAPER_DIR="${HOME}/Documents/wallpapers"
+
+if [[ ! -d "${WALLPAPER_DIR}" ]]; then
+  echo "Error: Directory ${WALLPAPER_DIR} does not exist."
+  exit 1
 fi
 
-# Use argument if provided, otherwise pick a random image.
-if [ -n "$1" ]; then
-    IMAGE="$WALLPAPER_DIR/$1"
+if [[ $# -gt 0 ]]; then
+  IMAGE="${WALLPAPER_DIR}/$1"
 else
-    # Find random image (jpg, png, jpeg)
-    IMAGE=$(find "$WALLPAPER_DIR" -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.jpeg \) | shuf -n 1)
+  IMAGE="$(find "${WALLPAPER_DIR}" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) | shuf -n 1)"
 fi
 
-# Check if image exists.
-if [ ! -f "$IMAGE" ]; then
-    echo "Error: Image '$IMAGE' not found!"
-    exit 1
+if [[ -z "${IMAGE}" || ! -f "${IMAGE}" ]]; then
+  echo "Error: Image '${IMAGE}' not found!"
+  exit 1
 fi
 
-echo "Applying: $IMAGE"
+echo "Applying: ${IMAGE}"
 
-# Ensure swww-daemon is running.
 swww query >/dev/null 2>&1 || swww-daemon &
 sleep 0.5
-
-# Apply wallpaper with swww.
-swww img "$IMAGE"
+swww img "${IMAGE}"
 
 echo "Wallpaper updated successfully!"
