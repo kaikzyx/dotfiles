@@ -3,34 +3,34 @@
 @define-color accent #888888;
 
 * {
-    font-family: JetBrainsMono Nerd Font;
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 #waybar {
-    color: @foreground;
-    background-color: @background;
+  color: @foreground;
+  background-color: @background;
 }
 
 #workspaces button {
-    color: @foreground;
-    background: transparent;
-    box-shadow: none;
-    border: none;
-    transition: none;
+  color: @foreground;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition: none;
 }
 
 #workspaces button:hover,
 #window,
 #custom-power:hover {
-    color: @accent;
+  color: @accent;
 }
 
 #tray,
 #wireplumber,
 #clock,
 #custom-power {
-    padding-right: 1em;
+  padding-right: 1em;
 }

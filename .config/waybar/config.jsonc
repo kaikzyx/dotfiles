@@ -1,51 +1,50 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 12,
-    "spacing": 5,
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
-    "modules-center": [
-        "custom/user",
-        "hyprland/window"
-    ],
-    "modules-right": [
-        "tray",
-        "wireplumber",
-        "clock",
-        "custom/power"
-    ],
-    "hyprland/workspaces": {
-        "format": "<span size='larger'>{icon}</span>",
-        "on-click": "activate",
-        "format-icons": {
-            "active": "\uf444",
-            "default": "\uf4c3"
-        },
-        "icon-size": 10,
-        "sort-by-number": true
+  "layer": "top",
+  "position": "top",
+  "height": 12,
+  "spacing": 5,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/user",
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "wireplumber",
+    "clock",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "format": "<span size='larger'>{icon}</span>",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "\uf444",
+      "default": "\uf4c3"
     },
-    "clock": {
-        "format": "{:%d.%m.%Y • %H:%M}"
-    },
-    "wireplumber": {
-        "format": "\udb81\udd7e {volume}%",
-        "max-volume": 100,
-        "scroll-step": 5
-    },
-    "tray": {
-        "icon-size": 16,
-        "spacing": 8
-    },
-    "custom/user": {
-        "exec": "echo $(whoami)@$(hostnamectl hostname):~",
-        "interval": "once",
-        "tooltip": false
-    },
-    "custom/power": {
-        "format": "⏻",
-        "on-click": "systemctl poweroff",
-        "tooltip": false
-    }
+    "icon-size": 10,
+    "sort-by-number": true
+  },
+  "clock": {
+    "format": "{:%d.%m.%Y • %H:%M}"
+  },
+  "wireplumber": {
+    "format": "\udb81\udd7e {volume}%",
+    "max-volume": 100,
+    "scroll-step": 5
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+  "custom/user": {
+    "exec": "echo $USER@$(hostname):~",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "systemctl poweroff",
+    "tooltip": false
+  }
 }
