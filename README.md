@@ -11,6 +11,7 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
 - Kitty (`.config/kitty`) with only the active theme (`OneDark.conf`)
 - VS Code user settings (`.config/Code/User/settings.json`)
 - Neovim LazyVim overrides only (`.config/nvim`)
+- Wallpapers (`wallpapers/*.png`)
 
 ## Repository layout
 
@@ -42,6 +43,9 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
 │   └── wofi
 │       ├── config
 │       └── style.css
+├── wallpapers
+│   ├── cat.png
+│   └── kita.png
 ├── .zshrc
 └── README.md
 ```
@@ -99,6 +103,7 @@ cp .p10k.zsh ~/.p10k.zsh
 - Neovim folder intentionally contains only files that override LazyVim defaults.
 - VS Code export intentionally contains only user settings, not history/cache/state.
 - Zsh setup assumes `oh-my-zsh` and `powerlevel10k` are installed in the expected paths.
+- Wallpapers are stored in `wallpapers/` and can be used by your wallpaper scripts.
 
 ## Maintenance
 
