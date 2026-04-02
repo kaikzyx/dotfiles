@@ -39,7 +39,8 @@
     "spacing": 8
   },
   "custom/user": {
-    "exec": "echo $USER@$(hostname):~",
+    "exec": "echo $(whoami)@$(hostnamectl hostname):~",
+    "interval": "once",
     "tooltip": false
   },
   "custom/power": {
