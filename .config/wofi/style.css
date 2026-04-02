@@ -1,0 +1,43 @@
+@define-color background #000000;
+@define-color foreground #ffffff;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+}
+
+#window {
+    background-color: transparent;
+}
+
+#outer-box {
+    background-color: @background;
+    padding: 16px;
+}
+
+#input {
+    background-color: transparent;
+    color: @foreground;
+    padding: 4px;
+    margin-bottom: 16px;
+}
+
+#entry {
+    padding: 8px;
+    background-color: transparent;
+    color: @foreground;
+}
+
+#text {
+    margin-left: 16px;
+    color: @foreground;
+}
+
+#entry:selected {
+    box-shadow: inset 0 0 0 1px @foreground;
+    font-weight: bold;
+}

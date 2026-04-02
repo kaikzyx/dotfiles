@@ -1,0 +1,53 @@
+{
+    "window.title": " ",
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.list.smoothScrolling": true,
+    "workbench.activityBar.location": "bottom",
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.editorActionsLocation": "hidden",
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always",
+    // Editor Config.
+    "editor.inlineSuggest.enabled": true,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.5,
+    "editor.fontWeight": "bold",
+    "editor.renderLineHighlight": "gutter",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.semanticHighlighting.enabled": false,
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.verticalScrollbarSize": 8,
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.rulers": [
+        100,
+        120
+    ],
+    "editor.colorDecorators": false,
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.codeLens": false,
+    "editor.glyphMargin": false,
+    "editor.showFoldingControls": "never",
+    // Files.
+    "files.autoSave": "afterDelay",
+    // Explore File Config.
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": true,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "package.json": ".eslint*, .prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*, .yarn*, yarn.lock",
+        "tailwind.config.js": "tailwind.config*, postcss.config*",
+        "next.config.js": "next*",
+        ".env.local": ".env*",
+        ".env": ".env*"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.colorTheme": "Dark+ Pure Black (OLED)",
+}

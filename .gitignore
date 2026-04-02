@@ -1,0 +1,9 @@
+# Editors
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Local backups
+*.bak

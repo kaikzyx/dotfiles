@@ -1,0 +1,36 @@
+@define-color background #000000;
+@define-color foreground #ffffff;
+@define-color accent #888888;
+
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#workspaces button {
+    color: @foreground;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    transition: none;
+}
+
+#workspaces button:hover,
+#window,
+#custom-power:hover {
+    color: @accent;
+}
+
+#tray,
+#wireplumber,
+#clock,
+#custom-power {
+    padding-right: 1em;
+}

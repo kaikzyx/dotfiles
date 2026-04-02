@@ -1,0 +1,10 @@
+show=drun
+width=386
+height=386
+prompt=...
+
+allow_images=true
+image_size=28
+
+hide_scroll=true
+no_actions=true
