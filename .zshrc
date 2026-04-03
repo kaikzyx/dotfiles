@@ -17,10 +17,11 @@ HISTSIZE=100000
 SAVEHIST=100000
 setopt share_history inc_append_history
 
-if [[ -f "$HOME/.asdf/asdf.sh" ]]; then
-  . "$HOME/.asdf/asdf.sh"
-  fpath=("${ASDF_DIR}/completions" $fpath)
+if command -v asdf &>/dev/null; then
+  export ASDF_DATA_DIR="$HOME/.asdf"
+  export PATH="$ASDF_DATA_DIR/shims:$PATH"
 fi
+
 autoload -Uz compinit && compinit
 
 alias wall="$HOME/.config/hypr/scripts/set_wallpaper.sh"
