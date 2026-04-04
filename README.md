@@ -27,7 +27,7 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
   - `waybar`
   - `wofi`
   - `kitty`
-  - `swww`
+  - `awww`
   - `hyprshot`
   - `wpctl` (PipeWire)
   - `brightnessctl`

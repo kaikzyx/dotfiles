@@ -22,8 +22,8 @@ fi
 
 echo "Applying: ${IMAGE}"
 
-swww query >/dev/null 2>&1 || swww-daemon &
+awww query >/dev/null 2>&1 || awww-daemon &
 sleep 0.5
-swww img "${IMAGE}"
+awww img "${IMAGE}"
 
 echo "Wallpaper updated successfully!"
