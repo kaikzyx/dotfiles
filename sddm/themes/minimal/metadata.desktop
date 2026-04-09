@@ -1,0 +1,10 @@
+[SddmGreeterTheme]
+Name=Minimal
+Description=Minimal sddm theme.
+Author=kaikzyx
+Version=1.0
+MainScript=Main.qml
+Theme-Id=minimal
+QtVersion=6
+
+ConfigFile=theme.conf

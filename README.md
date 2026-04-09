@@ -12,6 +12,7 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
 - VS Code user settings (`.config/Code/User/settings.json`)
 - Neovim LazyVim overrides only (`.config/nvim`)
 - Wallpapers (`wallpapers/*.png`)
+- SDDM custom theme (`sddm/themes/minimal`) and theme selection (`sddm/sddm.conf.d/theme.conf`)
 
 ## Prerequisites
 
@@ -31,6 +32,8 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
   - `hyprshot`
   - `wpctl` (PipeWire)
   - `brightnessctl`
+- Display/login manager:
+  - `sddm`
 - Fonts:
   - `JetBrainsMono Nerd Font`
 
@@ -48,6 +51,11 @@ cp -r ~/.config/Code ~/.config-backup/ 2>/dev/null || true
 cp -r ~/.config/nvim ~/.config-backup/ 2>/dev/null || true
 cp ~/.zshrc ~/.config-backup/ 2>/dev/null || true
 cp ~/.p10k.zsh ~/.config-backup/ 2>/dev/null || true
+
+# Optional: backup current SDDM setup (system-wide files)
+mkdir -p ~/.config-backup/sddm
+cp -r /usr/share/sddm/themes/minimal ~/.config-backup/sddm/ 2>/dev/null || true
+cp -r /etc/sddm.conf.d ~/.config-backup/sddm/ 2>/dev/null || true
 ```
 
 ### 2. Apply dotfiles
@@ -60,6 +68,15 @@ cp .zshrc ~/.zshrc
 cp .p10k.zsh ~/.p10k.zsh
 ```
 
+### 3. Install SDDM theme (system-wide)
+
+```bash
+sudo mkdir -p /usr/share/sddm/themes
+sudo cp -r sddm/themes/minimal /usr/share/sddm/themes/
+sudo mkdir -p /etc/sddm.conf.d
+sudo cp sddm/sddm.conf.d/10-theme.conf /etc/sddm.conf.d/
+```
+
 ## Notes
 
 - Kitty includes only the active theme referenced by `kitty.conf`.
@@ -67,3 +84,4 @@ cp .p10k.zsh ~/.p10k.zsh
 - VS Code export intentionally contains only user settings, not history/cache/state.
 - Zsh setup assumes `oh-my-zsh` and `powerlevel10k` are installed in the expected paths.
 - Wallpapers are stored in `wallpapers/` and can be used by your wallpaper scripts.
+- SDDM theme files are versioned in `sddm/themes/minimal`; enablement is set via `sddm/sddm.conf.d/theme.conf`.
