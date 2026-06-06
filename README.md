@@ -28,6 +28,8 @@ Personal dotfiles for an Arch Linux setup, focused on a minimal Wayland workflow
   - `waybar`
   - `wofi`
   - `kitty`
+  - `cliphist`
+  - `wl-clipboard`
   - `awww`
   - `hyprshot`
   - `wpctl` (PipeWire)
@@ -80,6 +82,7 @@ sudo cp sddm/sddm.conf.d/10-theme.conf /etc/sddm.conf.d/
 ## Notes
 
 - Kitty includes only the active theme referenced by `kitty.conf`.
+- Hyprland binds `SUPER+X` to `cliphist` for clipboard history access.
 - Neovim folder intentionally contains only files that override LazyVim defaults.
 - VS Code export intentionally contains only user settings, not history/cache/state.
 - Zsh setup assumes `oh-my-zsh` and `powerlevel10k` are installed in the expected paths.
