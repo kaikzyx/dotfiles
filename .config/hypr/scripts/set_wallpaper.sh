@@ -5,19 +5,19 @@ set -euo pipefail
 WALLPAPER_DIR="${HOME}/Documents/wallpapers"
 
 if [[ ! -d "${WALLPAPER_DIR}" ]]; then
-  echo "Error: Directory ${WALLPAPER_DIR} does not exist."
-  exit 1
+    echo "Error: Directory ${WALLPAPER_DIR} does not exist."
+    exit 1
 fi
 
 if [[ $# -gt 0 ]]; then
-  IMAGE="${WALLPAPER_DIR}/$1"
+    IMAGE="${WALLPAPER_DIR}/$1"
 else
-  IMAGE="$(find "${WALLPAPER_DIR}" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) | shuf -n 1)"
+    IMAGE="$(find "${WALLPAPER_DIR}" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) | shuf -n 1)"
 fi
 
 if [[ -z "${IMAGE}" || ! -f "${IMAGE}" ]]; then
-  echo "Error: Image '${IMAGE}' not found!"
-  exit 1
+    echo "Error: Image '${IMAGE}' not found!"
+    exit 1
 fi
 
 echo "Applying: ${IMAGE}"
